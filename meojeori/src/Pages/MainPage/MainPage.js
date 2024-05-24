@@ -19,7 +19,7 @@ const MainPage = () => {
                     <Div width="345px" height="70px" backgroundColor="none" margin="40px 0 0 450px">
                         <Img src={Ranking} width="345px" height="70px" />
                     </Div>
-                    <Div width="800px" height="344px" margin="-30px 0 0 0" backgroundColor="none">
+                    <Div width="800px" height="344px" margin="-25px 0 0 0" backgroundColor="none">
                         <Div backgroundColor="none">
                             <Img src={MainRanking} />
                         </Div>
