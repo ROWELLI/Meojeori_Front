@@ -52,6 +52,7 @@ justify-content: ${(props) => props.justifyContent || 'center'};
 align-items: ${(props) => props.alignItems || 'center'};
 align-content: ${(props) => props.alignContent || ''};
 background-color: ${(props) => props.backgroundColor || 'white'};
+border: ${(props) => props.border || '1px solid black'};
 font-size: ${(props) => props.fontSize || "15px"};
 font-weight: ${(props) => props.fontWeight || "bold"};
 margin: ${(props) => props.margin || ""};
