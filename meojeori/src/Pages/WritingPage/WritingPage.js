@@ -1,6 +1,10 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Coin from "../../Assets/Coin.svg";
+import Button from "../../Assets/Button.svg";
+import Pic from "../../Assets/Pic.svg";
+import Back from "../../Assets/Back.svg";
+import Wrote from "../../Assets/낭만 글쓰기.svg";
 
 const WritingPage = () => {
   const input = useRef(null);
@@ -34,14 +38,14 @@ const WritingPage = () => {
     <Container>
       <InnerContainer>
         <Write>
-          <div>낭만 글쓰기</div>
+          <WroteImage src={Wrote} alt="낭만 글쓰기" />
         </Write>
         <EditPic>
           <button type="button" onClick={onClickimg}>
             {info.image ? (
               <img src={info.image} alt="사진 추가" />
             ) : (
-              '+ 사진 추가'
+              <PicImage src={Pic} alt="사진 추가" />
             )}
           </button>
           <input type="file" ref={input} onChange={setImage} style={{ display: 'none' }} />
@@ -59,7 +63,9 @@ const WritingPage = () => {
           <Content type="text" placeholder="여러분은 어떤 청춘을 보내셨나요? 더 저렴하게 더 낭만있게 보내셨나요?" value={content} onChange={(e) => setContent(e.target.value)} />
         </ContentArea>
       </InnerContainer>
-      <WritingButton onClick={handleContent}>낭만 공유하기</WritingButton>
+      <WritingButton onClick={handleContent}>
+        <ButtonImage src={Button} alt="낭만 공유하기" />
+      </WritingButton>
     </Container>
   );
 };
@@ -75,7 +81,9 @@ const Container = styled.div`
   text-align: center;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to bottom, #5E8BFF, #A9C1FC); /* 전체 페이지 배경색 */
+  background-image: url(${Back}); /* 전체 페이지 배경 이미지 */
+  background-size: cover;
+  background-position: center;
 `;
 
 const InnerContainer = styled.div`
@@ -86,8 +94,8 @@ const InnerContainer = styled.div`
   text-align: center;
   width: 800px;
   background: linear-gradient(to bottom, #EDFFD8, #9DE44D); /* 그라데이션 배경 */
-  border: 2px solid black; /* 검은색 테두리 */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 6px 20px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  border: 1px solid black; /* 검은색 테두리 */
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1); /* 그림자 효과 */
   padding: 20px;
   margin-bottom: 23px; /* 버튼과의 간격을 위해 추가 */
   box-sizing: border-box; /* 박스 사이징 설정 */
@@ -98,6 +106,11 @@ const Write = styled.div`
   width: 110px;
   font-size: 20px;
   margin: 23px 0; /* 위아래 마진 23px */
+`;
+
+const WroteImage = styled.img`
+  width: 100%;
+  height: auto;
 `;
 
 const EditPic = styled.div`
@@ -116,6 +129,11 @@ const EditPic = styled.div`
   }
 `;
 
+const PicImage = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+`;
+
 const TitleArea = styled.div`
   margin-bottom: 10px;
   width: 100%;
@@ -127,7 +145,11 @@ const Title = styled.input`
   width: calc(100% - 4px); /* 패딩과 충돌 방지를 위한 너비 조정 */
   height: 32px;
   padding: 10px;
-  font-size: 16px;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 150% */
   border: 2px solid black; /* 검은색 테두리 */
   background-color: white; /* 배경색 흰색 */
   box-sizing: border-box; /* 박스 사이징 설정 */
@@ -158,7 +180,11 @@ const Price = styled.input`
   width: calc(100% - 4px);
   height: 32px;
   padding: 10px 10px 10px 40px; /* 왼쪽 패딩을 아이콘 공간 확보 위해 조정 */
-  font-size: 16px;
+  font-family: Pretendard;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25.5px; /* 150% */
   border: 2px solid black; /* 검은색 테두리 */
   background-color: white; /* 배경색 흰색 */
   box-sizing: border-box; /* 박스 사이징 설정 */
@@ -175,17 +201,26 @@ const Content = styled.input`
   width: calc(100% - 4px); /* 패딩과 충돌 방지를 위한 너비 조정 */
   height: 64px;
   padding: 10px;
-  font-size: 16px;
+  font-family: Pretendard;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.5px; /* 150% */
   border: 2px solid black; /* 검은색 테두리 */
   background-color: white; /* 배경색 흰색 */
   box-sizing: border-box; /* 박스 사이징 설정 */
 `;
 
 const WritingButton = styled.button`
-  padding: 10px 20px;
+  padding: 0; /* 패딩 제거 */
   font-size: 16px;
   cursor: pointer;
   width: 526px;
-  background-color: #FFFF00; /* 버튼 색상 변경 */
+  background: none; /* 배경 없음 */
   border: none; /* 테두리 제거 */
+`;
+
+const ButtonImage = styled.img`
+  width: 100%;
+  height: auto;
 `;
