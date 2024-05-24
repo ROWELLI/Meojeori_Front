@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Login from '../Pages/Login/Login'
 import Mypage from '../Pages/Mypage/Mypage'
+import MainPage from '../Pages/MainPage/MainPage'
 import WritingPage from '../Pages/WritingPage/WritingPage'
 import Header from '../Pages/Common/Header'
 import styled from 'styled-components'
@@ -12,6 +13,7 @@ function Router() {
             <Div>
                 <Routes>
                     <Route path='/' element={<Login />} />
+                    <Route path='/Main' element={<MainPage />} />
                     <Route path='/Mypage' element={<Mypage />} />
                     <Route path='/WritingPage' element={<WritingPage />} />
                     <Route path='/DetailPage' element={<DetailPage />} />

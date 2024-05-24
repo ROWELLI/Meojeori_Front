@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import HeaderBack from '../../Assets/HeaderBack.png'
+import HeaderLogo from '../../Assets/HeaderLogo.png'
+import HeaderWrite from '../../Assets/HeaderWrite.png'
 
 const Header = () => {
 
@@ -7,26 +10,23 @@ const Header = () => {
     return (
         // 전체 컨테이너
         <Container>
-            <Div width="800px" justifyContent="space-between">
-                <Div>
-                    <Div>
-                        logo
-                    </Div>
-                </Div>
-                <Div>
-                    <Div>
-                        글쓰기
-                    </Div>
-                    <Div>
-                        <Div>
-                            <Img></Img>
-                        </Div>
-                        <Div>
-                            유저 네임
-                        </Div>
-                    </Div>
-                </Div>
+            <Div width="800px" height="87px" justifyContent="space-between">
+                <Div height="87px" position="relative">
 
+                    <Div position="absolute">
+                        <Img src={HeaderBack} />
+                    </Div>
+                    <Div position="absolute" width="130px" height="55px">
+                        <Img src={HeaderLogo} />
+                    </Div>
+                    <Div position="absolute" width="93px" height="35px" margin="0 630px 0 0">
+                        <Img src={HeaderWrite} />
+                    </Div>
+                    <Div position="absolute" width="100px" height="35px" margin="0 0 0  630px">
+                        <Div>사진</Div>
+                        <Div>이름</Div>
+                    </Div>
+                </Div>
             </Div>
         </Container>
     )
@@ -39,7 +39,8 @@ export default Header
 
 const Container = styled.div`
 display: flex;
-height: 64px;
+height: 87px;
+margin-top: 21px;
 
 `
 
@@ -52,12 +53,13 @@ justify-content: ${(props) => props.justifyContent || 'center'};
 align-items: ${(props) => props.alignItems || 'center'};
 align-content: ${(props) => props.alignContent || ''};
 background-color: ${(props) => props.backgroundColor || 'white'};
-border: ${(props) => props.border || '1px solid black'};
+/* border: ${(props) => props.border || '1px solid black'}; */
 font-size: ${(props) => props.fontSize || "15px"};
 font-weight: ${(props) => props.fontWeight || "bold"};
 margin: ${(props) => props.margin || ""};
 padding: ${(props) => props.padding || ""};
 box-sizing: border-box;
+position: ${(props) => props.position || ''};
 `
 const Input = styled.input`
 width: ${(props) => props.width || '100%'};
@@ -77,5 +79,6 @@ border-radius: 5px;
 `
 
 const Img = styled.img`
-height: 31px;
+width: ${(props) => props.width || '100%'};
+height: ${(props) => props.height || '100%'};
 `
