@@ -12,8 +12,8 @@ const Login = () => {
         <Container>
 
             <Div flexDirection="column" justifyContent="start" style={{ background: "linear-gradient(to bottom, #5E8BFF, #A9C1FC)" }}>
-                <Div width="566px" height="155px" margin="80px 0 0 0">
-                    <Div>
+                <Div width="566px" height="155px" margin="80px 0 0 0" backgroundColor="none">
+                    <Div backgroundColor="none">
                         <Img src={LoginTitle} height="155px" />
                     </Div>
                 </Div>
@@ -22,7 +22,7 @@ const Login = () => {
                         <Img src={LoginCenter} height="348px" />
                     </Div>
                 </Div>
-                <Div width="566px" height="61px" margin="23px 0 0 0">
+                <Div width="566px" height="61px" margin="23px 0 0 0" backgroundColor="none">
                     <Div>
                         <Img src={LoginButton} height="61px" />
                     </Div>

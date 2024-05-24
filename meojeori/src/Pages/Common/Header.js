@@ -10,10 +10,10 @@ const Header = () => {
     return (
         // 전체 컨테이너
         <Container>
-            <Div width="800px" height="87px" justifyContent="space-between">
-                <Div height="87px" position="relative">
+            <Div width="800px" height="87px" justifyContent="space-between" margin="21px 0 0 0" backgroundColor="none">
+                <Div height="87px" position="relative" backgroundColor="none">
 
-                    <Div position="absolute">
+                    <Div position="absolute" backgroundColor="none">
                         <Img src={HeaderBack} />
                     </Div>
                     <Div position="absolute" width="130px" height="55px">
@@ -40,8 +40,9 @@ export default Header
 const Container = styled.div`
 display: flex;
 height: 87px;
-margin-top: 21px;
-
+width:100%;
+background-color:  #5e8bff;
+justify-content: center;
 `
 
 const Div = styled.div`
