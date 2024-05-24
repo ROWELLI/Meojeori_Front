@@ -10,7 +10,7 @@ const Login = () => {
             <Div>
                 <Div>
                     <Div>
-                        로고
+                        로고 !
                     </Div>
                 </Div>
                 <Div>
