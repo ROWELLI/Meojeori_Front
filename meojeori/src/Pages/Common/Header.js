@@ -1,41 +1,45 @@
 import styled from 'styled-components'
 
-const Login = () => {
+const Header = () => {
 
 
 
     return (
         // 전체 컨테이너
         <Container>
-            <Div flexDirection="column">
+            <Div width="800px" justifyContent="space-between">
                 <Div>
                     <Div>
-                        로고 !!
+                        logo
                     </Div>
                 </Div>
                 <Div>
                     <Div>
-                        뭔가 간지나게 설명
+                        글쓰기
                     </Div>
-                </Div>
-                <Div>
                     <Div>
-                        <a href='' style={{ color: "black", margin: "0 0 0 3px" }}>로그인</a>
+                        <Div>
+                            <Img></Img>
+                        </Div>
+                        <Div>
+                            유저 네임
+                        </Div>
                     </Div>
                 </Div>
+
             </Div>
         </Container>
     )
 }
 
-export default Login
+export default Header
 
 
 /* 스타일 컴포넌트 선언 */
 
 const Container = styled.div`
 display: flex;
-height: 100vh;
+height: 64px;
 
 `
 
