@@ -13,7 +13,7 @@ function Router() {
             <Div>
                 <Routes>
                     <Route path='/' element={<Login />} />
-                    <Route path='/Main' element={<MainPage />} />
+                    <Route path='/MainPage' element={<MainPage />} />
                     <Route path='/Mypage' element={<Mypage />} />
                     <Route path='/WritingPage' element={<WritingPage />} />
                     <Route path='/DetailPage' element={<DetailPage />} />
