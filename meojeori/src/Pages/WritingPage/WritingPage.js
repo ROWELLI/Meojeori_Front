@@ -5,6 +5,7 @@ import Button from "../../Assets/Button.svg";
 import Pic from "../../Assets/Pic.svg";
 import Back from "../../Assets/Back.svg";
 import Wrote from "../../Assets/낭만 글쓰기.svg";
+import { postContent, getUserData } from "../../AxiosAPI";
 
 const WritingPage = () => {
   const input = useRef(null);
@@ -28,10 +29,26 @@ const WritingPage = () => {
     }
   };
 
-  const handleContent = () => {
-    console.log("Title:", title);
-    console.log("Price:", price);
-    console.log("Content:", content);
+  const handleContent = async () => {
+    const postData = {
+      id: '3',
+      title: title,
+      price: Number(price),
+      content: content,
+      image: info.image
+    };
+    
+    console.log(postData);
+
+    console.log("Server URL:", process.env.REACT_APP_API_URL);
+
+    try {
+      // const response = await postContent(postData);
+      const response = await getUserData(postData.id);
+      console.log("Post successful:", response);
+    } catch (error) {
+      console.error("There was an error posting the content:", error);
+    }
   };
 
   return (
