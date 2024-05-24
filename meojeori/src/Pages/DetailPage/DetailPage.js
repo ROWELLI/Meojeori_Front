@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import fire from './fire.png';
 import coin from './coin.png';
-
+import Back from '../../Assets/Back.svg';
 
 function DetailPage() {
     return (
         <div>
-            <Container Width="100vw" Height="100vh" Background="linear-gradient(to bottom, #5E8BFF, #A9C1FC)">
+            <Container Width="100vw" Height="100vh" Image={`url(${Back})`}>
             <Container Border="2px solid black" Width="805px" Height="713px" Align="top" MarginTop="50px" Shadow="10px 10px 0px 0px rgba(0, 0, 0, 1);">
                 <Container Background="linear-gradient(to bottom, #EDFFD8, #9DE44D)" Color="#D9D9D9" Height="713px" Direction="column" Justify="top">
                     <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
@@ -46,6 +46,7 @@ function DetailPage() {
 }
 
 export const Container = styled.div`
+    background-image: ${(props) => props.Image};
     border: ${(props) => props.Border};
     margin-top: ${(props) => props.MarginTop};
     background: ${(props) => props.Background}; /* 그라데이션 배경 설정 */
