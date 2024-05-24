@@ -1,28 +1,49 @@
 import react from "react";
 import styled from 'styled-components';
+import fire from './fire.png';
+import coin from './coin.png';
 
 function Mypage() {
     return (
         <div>
-            <Container Height="220px" MarginTop="30px">
+            <Container Width="100vw" Height="100vh" Background="linear-gradient(to bottom, #5E8BFF, #A9C1FC)">
+            <Container Height="220px" MarginTop="30px" Color="transparent">
                 <Circle Width="160px" Height="160px"></Circle>
             </Container>
-            <Container Height="50px"><Text fontSize="20px">구글 로그인 이름</Text></Container>
-            <Container Height="50px"><Text fontSize="20px">이메일</Text></Container>
+            <Container Width="396px" Weight="110px" Color="White"></Container>
             <Container><IconButton Height="40px" Width="100px"><Text fontSize="20px">로그아웃</Text></IconButton></Container>
             
-            <Container Height="800px" Align="top" MarginTop="70px">
-                    <Container Height="50px" Justify="left"><Text fontSize="20px">작성한 글</Text></Container>
-                    <Container Color="#D9D9D9" Height="648px" Direction="column">
-                        <Container Width="740px" Height="50px" Justify="left"><Text fontSize="20px" MarginLeft="20px">유저 네임</Text></Container>
-                        <Container Color="#E6E6E6" Width="740px" Height="366px" Align="top"></Container>
-                        <Container Width="740px" Height="50px">
-                            <Container Justify="left" Width="650px"><Text fontSize="20px" MarginLeft="20px">낭만 지수</Text></Container>
-                            <Container Justify="left" Width="90px"><Text fontSize="20px">가격</Text></Container>                            
-                        </Container>
-                        <Container MarginLeft="60px" Width="680px" Height="50px" Justify="left"><Text fontSize="20px">제목</Text></Container>
-                        <Container MarginLeft="60px" Width="680px" Height="50px" Justify="left"><Text fontSize="20px">내용</Text></Container>
+            <Container Width="805px" Height="713px" Align="top" MarginTop="70px" Shadow="10px 10px 0px 0px rgba(0, 0, 0, 1);">
+                <Container Background="linear-gradient(to bottom, #EDFFD8, #9DE44D)" Color="#D9D9D9" Height="713px" Direction="column" Justify="top">
+                    <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
+                        <Circle Width="36px" Height="36px" />
+                        <Text fontSize="20px" MarginLeft="10px">유저 네임</Text>
                     </Container>
+                    <Container Color="#E6E6E6" Width="740px" Height="366px" Align="top"></Container>
+                    <Container Width="740px" Height="50px" Color="transparent">
+                        <Container Width="40px" Height="40px" Color="transparent">
+                            <img src={fire} alt="이미지 설명" />
+                        </Container>
+                        <Container Justify="left" Width="680px" Color="transparent">
+                            <Text fontSize="17px" FontWeight="bold" MarginLeft="0px">숫자 낭만 지수</Text>
+                        </Container>
+                    </Container>
+                    <Container Width="740px" Height="50px" Color="transparent">
+                        <Container Justify="left" Width="570px" MarginLeft="30px" Color="transparent">
+                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">제목</Text>
+                        </Container>
+                        <Container Justify="right" Width="90px" Color="transparent">
+                            <Text fontSize="17px">가격</Text>
+                        </Container>
+                        <Container Width="24px" Height="26px" Color="transparent" MarginLeft="10px">
+                            <img src={coin} alt="이미지 설명" />
+                        </Container>
+                    </Container>
+                    <Container MarginLeft="40px" Width="680px" Height="50px" Justify="left" Color="transparent">
+                        <Text fontSize="17px">내용</Text>
+                    </Container>
+                </Container>
+            </Container>
             </Container>
         </div>
     );
@@ -30,6 +51,7 @@ function Mypage() {
 
 export const Container = styled.div`
     margin-top: ${(props) => props.MarginTop};
+    background: ${(props) => props.Background}; /* 그라데이션 배경 설정 */
     background-color:  ${(props) => props.Color || "white"};
     width: ${(props) => props.Width || "100%"};
     height: ${(props) => props.Height || "auto"};
