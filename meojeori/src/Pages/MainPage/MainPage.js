@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import LoginTitle from '../../Assets/LoginTitle.png'
 import LoginCenter from '../../Assets/LoginCenter.png'
 import LoginButton from '../../Assets/LoginButton.png'
+import Ranking from '../../Assets/Ranking.png'
+import MainRanking from '../../Assets/MainRanking.png'
 import Header from '../Common/Header'
 
 const MainPage = () => {
@@ -11,12 +13,15 @@ const MainPage = () => {
     return (
         // 전체 컨테이너
         <Container>
-            <Div flexDirection="column">
+            <Div flexDirection="column" justifyContent="start">
                 <Header />
                 <Div flexDirection="column" justifyContent="start" style={{ background: "linear-gradient(to bottom, #5E8BFF, #A9C1FC)" }}>
-                    <Div width="566px" height="155px" margin="80px 0 0 0">
-                        <Div>
-                            <Img src={LoginTitle} height="155px" />
+                    <Div width="345px" height="70px" backgroundColor="none" margin="40px 0 0 450px">
+                        <Img src={Ranking} width="345px" height="70px" />
+                    </Div>
+                    <Div width="800px" height="344px" margin="-30px 0 0 0" backgroundColor="none">
+                        <Div backgroundColor="none">
+                            <Img src={MainRanking} />
                         </Div>
                     </Div>
                     <Div width="566px" height="348px" margin="20px 0 0 0">
