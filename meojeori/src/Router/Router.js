@@ -4,6 +4,7 @@ import Mypage from '../Pages/Mypage/Mypage'
 import WritingPage from '../Pages/WritingPage/WritingPage'
 import Header from '../Pages/Common/Header'
 import styled from 'styled-components'
+import DetailPage from '../Pages/DetailPage/DetailPage'
 
 function Router() {
     return (
@@ -13,6 +14,7 @@ function Router() {
                     <Route path='/' element={<Login />} />
                     <Route path='/Mypage' element={<Mypage />} />
                     <Route path='/WritingPage' element={<WritingPage />} />
+                    <Route path='/DetailPage' element={<DetailPage />} />
                 </Routes>
             </Div>
         </Container>
