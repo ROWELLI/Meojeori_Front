@@ -38,7 +38,11 @@ const WritingPage = () => {
       </Write>
       <EditPic>
         <button type="button" onClick={onClickimg}>
-          <img src={info.image || 'default-image-path'} alt="사진 추가" />
+          {info.image ? (
+            <img src={info.image} alt="사진 추가" />
+          ) : (
+            '+ 사진 추가'
+          )}
         </button>
         <input type="file" ref={input} onChange={setImage} style={{ display: 'none' }} />
       </EditPic>
@@ -76,10 +80,11 @@ const Write = styled.div`
 const EditPic = styled.div`
   margin-bottom: 20px;
   button {
-    background: none;
+    background: #E6E6E6;
     cursor: pointer;
     width: 740px;
     height: 367px;
+    border: none;
   }
   img {
     max-width: 200px;
@@ -93,7 +98,7 @@ const TitleArea = styled.div`
 `;
 
 const Title = styled.input`
-  width: 740px; /* 변경된 부분 */
+  width: 740px;
   height: 32px;
   padding: 10px;
   font-size: 16px;
@@ -105,7 +110,7 @@ const PriceArea = styled.div`
 `;
 
 const Price = styled.input`
-  width: 740px; /* 변경된 부분 */
+  width: 740px; 
   height: 32px;
   padding: 10px;
   font-size: 16px;
@@ -117,7 +122,7 @@ const ContentArea = styled.div`
 `;
 
 const Content = styled.input`
-  width: 740px; /* 변경된 부분 */
+  width: 740px; 
   height: 64px;
   padding: 10px;
   font-size: 16px;
@@ -127,4 +132,6 @@ const WritingButton = styled.button`
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  width: 526px;
+  border: none;
 `;
