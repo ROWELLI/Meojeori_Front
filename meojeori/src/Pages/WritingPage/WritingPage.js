@@ -75,12 +75,11 @@ const Write = styled.div`
 
 const EditPic = styled.div`
   margin-bottom: 20px;
-  width: 740px;
-  height: 367px;
   button {
     background: none;
-    border: none;
     cursor: pointer;
+    width: 740px;
+    height: 367px;
   }
   img {
     max-width: 200px;
@@ -94,27 +93,32 @@ const TitleArea = styled.div`
 `;
 
 const Title = styled.input`
-  width: 300px;
+  width: 740px; /* 변경된 부분 */
+  height: 32px;
   padding: 10px;
   font-size: 16px;
 `;
 
 const PriceArea = styled.div`
   margin-bottom: 20px;
+  width: 740px;
 `;
 
 const Price = styled.input`
-  width: 300px;
+  width: 740px; /* 변경된 부분 */
+  height: 32px;
   padding: 10px;
   font-size: 16px;
 `;
 
 const ContentArea = styled.div`
   margin-bottom: 20px;
+  width: 740px;
 `;
 
 const Content = styled.input`
-  width: 300px;
+  width: 740px; /* 변경된 부분 */
+  height: 64px;
   padding: 10px;
   font-size: 16px;
 `;
