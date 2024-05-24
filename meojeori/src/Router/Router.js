@@ -9,9 +9,6 @@ function Router() {
     return (
         <Container>
             <Div>
-                <Header />
-            </Div>
-            <Div>
                 <Routes>
                     <Route path='/' element={<Login />} />
                     <Route path='/Mypage' element={<Mypage />} />

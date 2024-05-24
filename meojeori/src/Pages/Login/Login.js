@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import LoginTitle from '../../Assets/LoginTitle.png'
+import LoginCenter from '../../Assets/LoginCenter.png'
+import LoginButton from '../../Assets/LoginButton.png'
 
 const Login = () => {
 
@@ -7,20 +10,20 @@ const Login = () => {
     return (
         // 전체 컨테이너
         <Container>
-            <Div flexDirection="column">
-                <Div>
+            <Div flexDirection="column" justifyContent="start">
+                <Div height="155px" margin="80px 0 0 0">
                     <Div>
-                        로고 !!
+                        <Img src={LoginTitle} height="155px" />
                     </Div>
                 </Div>
-                <Div>
+                <Div height="348px" margin="20px 0 0 0">
                     <Div>
-                        뭔가 간지나게 설명
+                        <Img src={LoginCenter} height="348px" />
                     </Div>
                 </Div>
-                <Div>
+                <Div height="61px" margin="23px 0 0 0">
                     <Div>
-                        <a href='' style={{ color: "black", margin: "0 0 0 3px" }}>로그인</a>
+                        <Img src={LoginButton} height="61px" />
                     </Div>
                 </Div>
             </Div>
@@ -36,6 +39,8 @@ export default Login
 const Container = styled.div`
 display: flex;
 height: 100vh;
+width: 100vw;
+/* background: linear-gradient(to bottom, #5E8BFF, #A9C1FC); */
 
 `
 
@@ -48,6 +53,7 @@ justify-content: ${(props) => props.justifyContent || 'center'};
 align-items: ${(props) => props.alignItems || 'center'};
 align-content: ${(props) => props.alignContent || ''};
 background-color: ${(props) => props.backgroundColor || 'white'};
+/* border: ${(props) => props.border || '1px solid black'}; */
 font-size: ${(props) => props.fontSize || "15px"};
 font-weight: ${(props) => props.fontWeight || "bold"};
 margin: ${(props) => props.margin || ""};
@@ -72,5 +78,5 @@ border-radius: 5px;
 `
 
 const Img = styled.img`
-height: 31px;
+height: ${(props) => props.height || '100%'};
 `
