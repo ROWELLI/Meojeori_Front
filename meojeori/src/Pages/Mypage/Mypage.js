@@ -2,6 +2,7 @@ import react from "react";
 import styled from 'styled-components';
 import fire from './fire.png';
 import coin from './coin.png';
+import offfire from './offfire.png'
 
 function Mypage() {
     return (
@@ -10,10 +11,22 @@ function Mypage() {
             <Container Height="220px" MarginTop="30px" Color="transparent">
                 <Circle Width="160px" Height="160px"></Circle>
             </Container>
-            <Container Width="396px" Weight="110px" Color="White"></Container>
-            <Container><IconButton Height="40px" Width="100px"><Text fontSize="20px">로그아웃</Text></IconButton></Container>
             
-            <Container Width="805px" Height="713px" Align="top" MarginTop="70px" Shadow="10px 10px 0px 0px rgba(0, 0, 0, 1);">
+            <Container Color="transparent"><Container Border="2px solid black" Width="396px" Height="110px" Color="white" Shadow="5px 5px 0px 0px rgba(0, 0, 0, 1)">
+                <Container Width="10px"><Circle Width="8px" Height="8px" Color="black"></Circle></Container>
+                <Container Width="360px"></Container>
+                <Container Width="10px"><Circle Width="8px" Height="8px" Color="black"></Circle></Container>
+                <Container Width="90%" Justify="left"><Text fontSize="17px" MarginLeft="20px">NAME: 구글 로그인 이름</Text></Container>
+                <Container Width="90%" Justify="left"><Text fontSize="17px" MarginLeft="20px">E-MAIL: google@gamil.com</Text></Container>
+                <Container>
+
+                <Container Width="10px"><Circle Width="8px" Height="8px" Color="black"></Circle></Container>
+                <Container Width="360px"></Container>
+                <Container Width="10px"><Circle Width="8px" Height="8px" Color="black"></Circle></Container>
+                </Container>
+                </Container></Container>
+            
+            <Container Border="2px solid black" Width="805px" Height="713px" Align="top" MarginTop="70px" Shadow="5px 5px 0px 0px rgba(0, 0, 0, 1);">
                 <Container Background="linear-gradient(to bottom, #EDFFD8, #9DE44D)" Color="#D9D9D9" Height="713px" Direction="column" Justify="top">
                     <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
                         <Circle Width="36px" Height="36px" />
@@ -43,6 +56,38 @@ function Mypage() {
                         <Text fontSize="17px">내용</Text>
                     </Container>
                 </Container>
+                
+            </Container>
+            <Container Border="2px solid black" Width="805px" Height="713px" Align="top" MarginTop="70px" Shadow="5px 5px 0px 0px rgba(0, 0, 0, 1);">
+                <Container Color="white" Height="713px" Direction="column" Justify="top">
+                    <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
+                        <Circle Width="36px" Height="36px" />
+                        <Text fontSize="20px" MarginLeft="10px">유저 네임</Text>
+                    </Container>
+                    <Container Color="#E6E6E6" Width="740px" Height="366px" Align="top"></Container>
+                    <Container Width="740px" Height="50px" Color="transparent">
+                        <Container Width="40px" Height="40px" Color="transparent">
+                            <img src={offfire} alt="이미지 설명" />
+                        </Container>
+                        <Container Justify="left" Width="680px" Color="transparent">
+                            <Text fontSize="17px" FontWeight="bold" MarginLeft="0px">숫자 낭만 지수</Text>
+                        </Container>
+                    </Container>
+                    <Container Width="740px" Height="50px" Color="transparent">
+                        <Container Justify="left" Width="570px" MarginLeft="30px" Color="transparent">
+                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">제목</Text>
+                        </Container>
+                        <Container Justify="right" Width="90px" Color="transparent">
+                            <Text fontSize="17px">가격</Text>
+                        </Container>
+                        <Container Width="24px" Height="26px" Color="transparent" MarginLeft="10px">
+                            <img src={coin} alt="이미지 설명" />
+                        </Container>
+                    </Container>
+                    <Container MarginLeft="40px" Width="680px" Height="50px" Justify="left" Color="transparent">
+                        <Text fontSize="17px">내용</Text>
+                    </Container>
+                </Container>
             </Container>
             </Container>
         </div>
@@ -50,6 +95,7 @@ function Mypage() {
 }
 
 export const Container = styled.div`
+    border: ${(props) => props.Border};
     margin-top: ${(props) => props.MarginTop};
     background: ${(props) => props.Background}; /* 그라데이션 배경 설정 */
     background-color:  ${(props) => props.Color || "white"};
@@ -61,6 +107,7 @@ export const Container = styled.div`
     margin-left: ${(props) => props.MarginLeft || '0px'};
     flex-direction: ${(props) => props.Direction || 'none'};; /* 세로 방향으로 아이템 나열 */    
     flex-wrap: wrap;
+    box-shadow: ${(props) => props.Shadow || 'none'};
 `;
 
 export const Circle = styled.div`
@@ -82,17 +129,5 @@ export const Text = styled.div`
     text-decoration :  ${(props) => props.TextDeco || "none"};
 `;
 
-const IconButton = styled.button`
-    background-color: lightgray;
-    line-height: 0;
-    border: none;
-    width: ${(props) => props.Width};  //props로 width가변값으로 만들기
-    padding: 0px;
-    height: ${(props) => props.Height};  //props로 height가변값으로 만들기
-    margin-left: ${(props) => props.MarginLeft};
-    &:hover{
-        background-color: gray;
-    }
-    `;
 
 export default Mypage;
