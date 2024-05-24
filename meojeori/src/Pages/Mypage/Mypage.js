@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import fire from './fire.png';
 import coin from './coin.png';
 import offfire from './offfire.png'
+import Back from '../../Assets/Back.svg';
 
 function Mypage() {
     return (
         <div>
-            <Container Width="100vw" Height="100vh" Background="linear-gradient(to bottom, #5E8BFF, #A9C1FC)">
+            <Container Width="100vw" Height="100vh" Image={`url(${Back})`}>
             <Container Height="220px" MarginTop="30px" Color="transparent">
                 <Circle Width="160px" Height="160px"></Circle>
             </Container>
@@ -25,6 +26,8 @@ function Mypage() {
                 <Container Width="10px"><Circle Width="8px" Height="8px" Color="black"></Circle></Container>
                 </Container>
                 </Container></Container>
+            <Container Width="805px" Color="transparent">
+
             
             <Container Border="2px solid black" Width="805px" Height="713px" Align="top" MarginTop="70px" Shadow="5px 5px 0px 0px rgba(0, 0, 0, 1);">
                 <Container Background="linear-gradient(to bottom, #EDFFD8, #9DE44D)" Color="#D9D9D9" Height="713px" Direction="column" Justify="top">
@@ -56,8 +59,10 @@ function Mypage() {
                         <Text fontSize="17px">내용</Text>
                     </Container>
                 </Container>
-                
             </Container>
+            </Container>
+
+            <Container Width="100vw" Height="100vh" Image={`url(${Back})`} MarginTop="10px" Align="Top">
             <Container Border="2px solid black" Width="805px" Height="713px" Align="top" MarginTop="70px" Shadow="5px 5px 0px 0px rgba(0, 0, 0, 1);">
                 <Container Color="white" Height="713px" Direction="column" Justify="top">
                     <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
@@ -90,11 +95,16 @@ function Mypage() {
                 </Container>
             </Container>
             </Container>
+
+            </Container>
+
+
         </div>
     );
 }
 
 export const Container = styled.div`
+    background-image: ${(props) => props.Image};
     border: ${(props) => props.Border};
     margin-top: ${(props) => props.MarginTop};
     background: ${(props) => props.Background}; /* 그라데이션 배경 설정 */
