@@ -8,7 +8,7 @@ function DetailPage() {
     return (
         <div>
             <Container Width="100vw" Height="100vh" Background="linear-gradient(to bottom, #5E8BFF, #A9C1FC)">
-            <Container Width="805px" Height="713px" Align="top" MarginTop="70px" Shadow="10px 10px 0px 0px rgba(0, 0, 0, 1);">
+            <Container Border="2px solid black" Width="805px" Height="713px" Align="top" MarginTop="50px" Shadow="10px 10px 0px 0px rgba(0, 0, 0, 1);">
                 <Container Background="linear-gradient(to bottom, #EDFFD8, #9DE44D)" Color="#D9D9D9" Height="713px" Direction="column" Justify="top">
                     <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
                         <Circle Width="36px" Height="36px" />
@@ -20,12 +20,12 @@ function DetailPage() {
                             <img src={fire} alt="이미지 설명" />
                         </Container>
                         <Container Justify="left" Width="680px" Color="transparent">
-                            <Text fontSize="17px" FontWeight="bold" MarginLeft="0px">숫자 낭만 지수</Text>
+                            <Text fontSize="17px" FontWeight="bolder" MarginLeft="10px">숫자 낭만 지수</Text>
                         </Container>
                     </Container>
                     <Container Width="740px" Height="50px" Color="transparent">
                         <Container Justify="left" Width="570px" MarginLeft="30px" Color="transparent">
-                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">제목</Text>
+                            <Text fontSize="22px" FontWeight="bolder" MarginLeft="10px">제목</Text>
                         </Container>
                         <Container Justify="right" Width="90px" Color="transparent">
                             <Text fontSize="17px">가격</Text>
@@ -46,6 +46,7 @@ function DetailPage() {
 }
 
 export const Container = styled.div`
+    border: ${(props) => props.Border};
     margin-top: ${(props) => props.MarginTop};
     background: ${(props) => props.Background}; /* 그라데이션 배경 설정 */
     background-color: ${(props) => props.Color || "white"};
