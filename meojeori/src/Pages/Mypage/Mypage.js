@@ -6,8 +6,8 @@ import offfire from './offfire.png'
 import Back from '../../Assets/Back.svg';
 import { getUserData } from '../../AxiosAPI';
 import Header from '../Common/Header';
-import trip1 from './trip1.jpeg';
-import trip2 from './trip2.jpeg';
+import trip1 from './trip1.png';
+import trip2 from './trip2.png';
 
 function Mypage() {
     const [userData, setUserData] = useState({}); // 유저 데이터를 저장할 state 추가
@@ -65,22 +65,20 @@ function Mypage() {
                     </Container>
                     <Container Width="740px" Height="50px" Color="transparent">
                         <Container Justify="left" Width="570px" MarginLeft="30px" Color="transparent">
-                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">포항 핫플 영일대, 가성비로 즐기기</Text>
+                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">낭만 안뒤진 일상</Text>
                         </Container>
                         <Container Justify="right" Width="90px" Color="transparent">
-                            <Text fontSize="17px">100,000</Text>
+                            <Text fontSize="17px">30,000</Text>
                         </Container>
                         <Container Width="24px" Height="26px" Color="transparent" MarginLeft="10px">
                             <img src={coin} alt="이미지 설명" />
                         </Container>
                     </Container>
-                    <Container MarginLeft="40px" Width="700px" Height="50px" Justify="left" Color="transparent">
-                        <Text fontSize="17px" Align="left">간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한최대 두줄 설명간략한최대 두줄 설명간략 최...</Text>
+                    <Container MarginLeft="50px" Width="700px" Height="50px" Justify="left" Color="transparent">
+                        <Text fontSize="17px" Align="left" MarginTop="-20px"><p>어제 팀 새내기들이 날 불렀다. <br/>밤 11시에 ... 갑자기 영일만항을 가자더라 차도 없는데 ^^ ,,,,</p></Text>
                     </Container>
                 </Container>
             </Container>
-            
-
 
             <Container Border="2px solid black" Width="805px" Height="630px" Align="top" MarginTop="70px" Shadow="5px 5px 0px 0px rgba(0, 0, 0, 1);">
                 <Container Color="white" Height="630px" Direction="column" Justify="top">
@@ -99,17 +97,17 @@ function Mypage() {
                     </Container>
                     <Container Width="740px" Height="50px" Color="transparent">
                         <Container Justify="left" Width="570px" MarginLeft="30px" Color="transparent">
-                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">경주 호랑이 펜션에서 개인당 2만원 주고 숙박하기</Text>
+                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">숏커톤 달리자</Text>
                         </Container>
                         <Container Justify="right" Width="90px" Color="transparent">
-                            <Text fontSize="17px">200,000</Text>
+                            <Text fontSize="17px">30,000</Text>
                         </Container>
                         <Container Width="24px" Height="26px" Color="transparent" MarginLeft="10px">
                             <img src={coin} alt="이미지 설명" />
                         </Container>
                     </Container>
-                    <Container MarginLeft="40px" Width="700px" Height="50px" Justify="left" Color="transparent">
-                        <Text fontSize="17px" Align="left">간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한최대 두줄 설명간략한최대 두줄 설명간략 최...</Text>
+                    <Container MarginLeft="50px" Width="700px" Height="50px" Justify="left" Color="transparent">
+                        <Text fontSize="17px" Align="left" MarginTop="-20px"><p>바다는 예쁘고<br/> 우리는 달린다</p></Text>
                     </Container>
                 </Container>
             </Container>

@@ -4,6 +4,7 @@ import fire from './fire.png';
 import coin from './coin.png';
 import Back from '../../Assets/Back.svg';
 import Header from '../Common/Header';
+import trip1 from './trip1.png'
 
 function DetailPage() {
     return (
@@ -16,9 +17,9 @@ function DetailPage() {
                 <Container Background="linear-gradient(to bottom, #EDFFD8, #9DE44D)" Color="#D9D9D9" Height="713px" Direction="column" Justify="top">
                     <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
                         <Circle Width="36px" Height="36px" />
-                        <Text fontSize="20px" MarginLeft="10px">유저 네임</Text>
+                        <Text fontSize="20px" MarginLeft="10px">이온유</Text>
                     </Container>
-                    <Container Color="#E6E6E6" Width="740px" Height="366px" Align="top"></Container>
+                    <Container Color="#E6E6E6" Width="740px" Height="366px" Align="top"><img width="740px" height="366px" src={trip1} alt="trip1"/></Container>
                     <Container Width="740px" Height="50px" Color="transparent">
                         <Container Width="40px" Height="40px" Color="transparent">
                             <img src={fire} alt="이미지 설명" />
@@ -29,7 +30,7 @@ function DetailPage() {
                     </Container>
                     <Container Width="740px" Height="50px" Color="transparent">
                         <Container Justify="left" Width="570px" MarginLeft="30px" Color="transparent">
-                            <Text fontSize="22px" FontWeight="bolder" MarginLeft="10px">제목</Text>
+                            <Text fontSize="22px" FontWeight="bolder" MarginLeft="10px">낭만 안뒤진 일상</Text>
                         </Container>
                         <Container Justify="right" Width="90px" Color="transparent">
                             <Text fontSize="17px">30,000</Text>
@@ -38,8 +39,8 @@ function DetailPage() {
                             <img src={coin} alt="이미지 설명" />
                         </Container>
                     </Container>
-                    <Container MarginLeft="40px" Width="700px" Height="50px" Justify="left" Color="transparent">
-                        <Text fontSize="17px" Align="left">간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한최대 두줄 설명간략한최대 두줄 설명간략 최간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한최대 두줄 설명간략한최대 두줄 설명간략 최간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한</Text>
+                    <Container MarginLeft="50px" Width="700px" Height="50px" Justify="left" Color="transparent" MarginTop="-10px">
+                        <Text fontSize="17px" Align="left"><p>어제 팀 새내기들이 날 불렀다. 밤 11시에 ...<br/> 갑자기 영일만항을 가자더라 차도 없는데 ^^ ,,,,<br/> 레전드 거렁뱅이라서 택시는 포기하고 킥보드 타고 달림<br/> 6000원짜리 낭만 뒤@졌잖아 ~</p></Text>
                     </Container>
                 </Container>
             </Container>
