@@ -11,7 +11,7 @@ function DetailPage() {
             
             
             <Container Width="100vw" Height="100vh" Image={`url(${Back})`}>
-            <Container MarginTop="-100px"><Header /></Container>
+            <Container MarginTop="-140px"><Header /></Container>
             <Container Border="2px solid black" Width="805px" Height="713px" Align="top" MarginTop="-50px" Shadow="5px 5px 0px 0px rgba(0, 0, 0, 1);">
                 <Container Background="linear-gradient(to bottom, #EDFFD8, #9DE44D)" Color="#D9D9D9" Height="713px" Direction="column" Justify="top">
                     <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
@@ -24,7 +24,7 @@ function DetailPage() {
                             <img src={fire} alt="이미지 설명" />
                         </Container>
                         <Container Justify="left" Width="680px" Color="transparent">
-                            <Text fontSize="17px" FontWeight="bolder" MarginLeft="10px">숫자 낭만 지수</Text>
+                            <Text fontSize="17px" FontWeight="bolder" MarginLeft="10px">23 낭만 지수</Text>
                         </Container>
                     </Container>
                     <Container Width="740px" Height="50px" Color="transparent">
@@ -32,14 +32,14 @@ function DetailPage() {
                             <Text fontSize="22px" FontWeight="bolder" MarginLeft="10px">제목</Text>
                         </Container>
                         <Container Justify="right" Width="90px" Color="transparent">
-                            <Text fontSize="17px">가격</Text>
+                            <Text fontSize="17px">30,000</Text>
                         </Container>
                         <Container Width="24px" Height="26px" Color="transparent" MarginLeft="10px">
                             <img src={coin} alt="이미지 설명" />
                         </Container>
                     </Container>
-                    <Container MarginLeft="40px" Width="680px" Height="50px" Justify="left" Color="transparent">
-                        <Text fontSize="17px">내용</Text>
+                    <Container MarginLeft="40px" Width="700px" Height="50px" Justify="left" Color="transparent">
+                        <Text fontSize="17px" Align="left">간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한최대 두줄 설명간략한최대 두줄 설명간략 최간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한최대 두줄 설명간략한최대 두줄 설명간략 최간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한</Text>
                     </Container>
                 </Container>
             </Container>
@@ -79,7 +79,7 @@ export const Text = styled.div`
     margin-top: ${(props) => props.MarginTop};
     font-weight: ${(props) => props.FontWeight};
     font-size: ${(props) => props.fontSize || '13px'};
-    text-align: center; /* 글자 가운데 정렬 */
+    text-align: ${(props) => props.Align || 'center'}; /* 글자 가운데 정렬 */
     color: ${(props) => props.Color || "#000000"}; // 검정색을 디폴트 값으로 지정
     display: inline-block; /* 텍스트를 한 줄로 표시 */
     text-decoration: ${(props) => props.TextDeco || "none"};

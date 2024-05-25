@@ -6,6 +6,8 @@ import offfire from './offfire.png'
 import Back from '../../Assets/Back.svg';
 import { getUserData } from '../../AxiosAPI';
 import Header from '../Common/Header';
+import trip1 from './trip1.jpeg';
+import trip2 from './trip2.jpeg';
 
 function Mypage() {
     const [userData, setUserData] = useState({}); // 유저 데이터를 저장할 state 추가
@@ -30,11 +32,11 @@ function Mypage() {
             </Container>
             
             <Container Color="transparent" MarginTop="-30px"><Container Border="2px solid black" Width="396px" Height="110px" Color="white" Shadow="5px 5px 0px 0px rgba(0, 0, 0, 1)">
-                <Container Width="10px"><Circle Width="8px" Height="8px" Color="black"></Circle></Container>
+                <Container Width="10px" ><Circle Width="8px" Height="8px" Color="black"></Circle></Container>
                 <Container Width="360px"></Container>
                 <Container Width="10px"><Circle Width="8px" Height="8px" Color="black"></Circle></Container>
-                <Container Width="90%" Justify="left"><Text fontSize="17px" MarginLeft="20px">NAME: {userData.name || ''}</Text></Container>
-                <Container Width="90%" Justify="left"><Text fontSize="17px" MarginLeft="20px">E-MAIL: {userData.email || ''}</Text></Container>
+                <Container Width="90%" Justify="left"><Text fontSize="17px" MarginLeft="20px">NAME: 이온유</Text></Container>
+                <Container Width="90%" Justify="left"><Text fontSize="17px" MarginLeft="20px">E-MAIL: google@gmail.com</Text></Container>
                 <Container>
 
                 <Container Width="10px"><Circle Width="8px" Height="8px" Color="black"></Circle></Container>
@@ -50,30 +52,30 @@ function Mypage() {
                 <Container Background="linear-gradient(to bottom, #EDFFD8, #9DE44D)" Color="#D9D9D9" Height="630px" Direction="column" Justify="top">
                     <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
                         <Circle Width="36px" Height="36px" />
-                        <Text fontSize="20px" MarginLeft="10px">{userData.name || ''}</Text>
+                        <Text fontSize="20px" MarginLeft="10px">이온유</Text>
                     </Container>
-                    <Container Color="#E6E6E6" Width="740px" Height="366px" Align="top"></Container>
+                    <Container Color="#E6E6E6" Width="740px" Height="366px" Align="top"><img width="740px" height="366px" src={trip1} alt="trip1"></img></Container>
                     <Container Width="740px" Height="50px" Color="transparent">
                         <Container Width="40px" Height="40px" Color="transparent">
                             <img src={fire} alt="이미지 설명" />
                         </Container>
                         <Container Justify="left" Width="680px" Color="transparent">
-                            <Text fontSize="17px" FontWeight="bold" MarginLeft="0px">{userData.id || ''} 낭만 지수</Text>
+                            <Text fontSize="17px" FontWeight="bold" MarginLeft="0px">23 낭만 지수</Text>
                         </Container>
                     </Container>
                     <Container Width="740px" Height="50px" Color="transparent">
                         <Container Justify="left" Width="570px" MarginLeft="30px" Color="transparent">
-                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">{userData.introduce || ''}</Text>
+                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">포항 핫플 영일대, 가성비로 즐기기</Text>
                         </Container>
                         <Container Justify="right" Width="90px" Color="transparent">
-                            <Text fontSize="17px">가격</Text>
+                            <Text fontSize="17px">100,000</Text>
                         </Container>
                         <Container Width="24px" Height="26px" Color="transparent" MarginLeft="10px">
                             <img src={coin} alt="이미지 설명" />
                         </Container>
                     </Container>
-                    <Container MarginLeft="40px" Width="680px" Height="50px" Justify="left" Color="transparent">
-                        <Text fontSize="17px">내용</Text>
+                    <Container MarginLeft="40px" Width="700px" Height="50px" Justify="left" Color="transparent">
+                        <Text fontSize="17px" Align="left">간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한최대 두줄 설명간략한최대 두줄 설명간략 최...</Text>
                     </Container>
                 </Container>
             </Container>
@@ -84,30 +86,30 @@ function Mypage() {
                 <Container Color="white" Height="630px" Direction="column" Justify="top">
                     <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
                         <Circle Width="36px" Height="36px" />
-                        <Text fontSize="20px" MarginLeft="10px">유저 네임</Text>
+                        <Text fontSize="20px" MarginLeft="10px">이온유</Text>
                     </Container>
-                    <Container Color="#E6E6E6" Width="740px" Height="366px" Align="top"></Container>
+                    <Container Color="#E6E6E6" Width="740px" Height="366px" Align="top"><img width="740px" height="366px" src={trip2} alt="trip1"/></Container>
                     <Container Width="740px" Height="50px" Color="transparent">
                         <Container Width="40px" Height="40px" Color="transparent">
                             <img src={offfire} alt="이미지 설명" />
                         </Container>
                         <Container Justify="left" Width="680px" Color="transparent">
-                            <Text fontSize="17px" FontWeight="bold" MarginLeft="0px">숫자 낭만 지수</Text>
+                            <Text fontSize="17px" FontWeight="bold" MarginLeft="0px">6 낭만 지수</Text>
                         </Container>
                     </Container>
                     <Container Width="740px" Height="50px" Color="transparent">
                         <Container Justify="left" Width="570px" MarginLeft="30px" Color="transparent">
-                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">제목</Text>
+                            <Text fontSize="22px" FontWeight="bold" MarginLeft="10px">경주 호랑이 펜션에서 개인당 2만원 주고 숙박하기</Text>
                         </Container>
                         <Container Justify="right" Width="90px" Color="transparent">
-                            <Text fontSize="17px">가격</Text>
+                            <Text fontSize="17px">200,000</Text>
                         </Container>
                         <Container Width="24px" Height="26px" Color="transparent" MarginLeft="10px">
                             <img src={coin} alt="이미지 설명" />
                         </Container>
                     </Container>
-                    <Container MarginLeft="40px" Width="680px" Height="50px" Justify="left" Color="transparent">
-                        <Text fontSize="17px">내용</Text>
+                    <Container MarginLeft="40px" Width="700px" Height="50px" Justify="left" Color="transparent">
+                        <Text fontSize="17px" Align="left">간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한 최대 두줄 설명간략한최대 두줄 설명간략한최대 두줄 설명간략 최...</Text>
                     </Container>
                 </Container>
             </Container>
@@ -150,7 +152,7 @@ export const Text = styled.div`
     margin-top: ${(props) => props.MarginTop};
     font-weight: ${(props) => props.FontWeight};
     font-size: ${(props) => props.fontSize || '13px'};
-    text-align: center; /* 글자 가운데 정렬 */
+    text-align: ${(props) => props.Align || 'center'}; /* 글자 가운데 정렬 */
     color: ${(props) => props.Color || "#000000"}; //검정색을 디폴드 값으로 지정
     display: inline-block; /* 텍스트를 한 줄로 표시 */
     text-decoration :  ${(props) => props.TextDeco || "none"};
