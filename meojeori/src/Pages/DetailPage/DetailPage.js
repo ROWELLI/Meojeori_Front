@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import fire from './fire.png';
 import coin from './coin.png';
 import Back from '../../Assets/Back.svg';
+import Header from '../Common/Header';
 
 function DetailPage() {
     return (
         <div>
+            
+            
             <Container Width="100vw" Height="100vh" Image={`url(${Back})`}>
-            <Container Border="2px solid black" Width="805px" Height="713px" Align="top" MarginTop="50px" Shadow="10px 10px 0px 0px rgba(0, 0, 0, 1);">
+            <Container MarginTop="-100px"><Header /></Container>
+            <Container Border="2px solid black" Width="805px" Height="713px" Align="top" MarginTop="-50px" Shadow="5px 5px 0px 0px rgba(0, 0, 0, 1);">
                 <Container Background="linear-gradient(to bottom, #EDFFD8, #9DE44D)" Color="#D9D9D9" Height="713px" Direction="column" Justify="top">
                     <Container MarginTop="50px" Width="740px" Height="50px" Justify="left" Color="transparent">
                         <Circle Width="36px" Height="36px" />
