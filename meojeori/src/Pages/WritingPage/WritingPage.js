@@ -6,6 +6,7 @@ import Pic from "../../Assets/Pic.svg";
 import Back from "../../Assets/Back.svg";
 import Wrote from "../../Assets/낭만 글쓰기.svg";
 import { postContent, getUserData } from "../../AxiosAPI";
+import Header from "../Common/Header";
 
 const WritingPage = () => {
   const input = useRef(null);
@@ -31,11 +32,11 @@ const WritingPage = () => {
 
   const handleContent = async () => {
     const postData = {
-      id: '3',
+      // id: '141116e1-2116-471e-b766-35fa65bae15b',
       title: title,
       price: Number(price),
       content: content,
-      image: info.image
+      // image: info.image
     };
     
     console.log(postData);
@@ -43,8 +44,8 @@ const WritingPage = () => {
     console.log("Server URL:", process.env.REACT_APP_API_URL);
 
     try {
-      // const response = await postContent(postData);
-      const response = await getUserData(postData.id);
+      // const response = await getUserData(postData.id);
+      const response = await postContent(postData);
       console.log("Post successful:", response);
     } catch (error) {
       console.error("There was an error posting the content:", error);
@@ -53,6 +54,9 @@ const WritingPage = () => {
 
   return (
     <Container>
+      <HeaderContainer>
+        <Header />
+      </HeaderContainer>
       <InnerContainer>
         <Write>
           <WroteImage src={Wrote} alt="낭만 글쓰기" />
@@ -101,6 +105,10 @@ const Container = styled.div`
   background-image: url(${Back}); /* 전체 페이지 배경 이미지 */
   background-size: cover;
   background-position: center;
+`;
+
+const HeaderContainer = styled.div`
+  margin-bottom: 29px;
 `;
 
 const InnerContainer = styled.div`
